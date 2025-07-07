@@ -1,7 +1,7 @@
 package com.tecdesoftware.market.persistance.mapper;
 
 import com.tecdesoftware.market.domain.Product;
-import com.tecdesoftware.market.persistence.entity.Producto;
+import com.tecdesoftware.market.persistance.entity.Producto;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -15,6 +15,7 @@ public interface ProductMapper {
     @Mappings({
             @Mapping(source = "idProducto", target = "productId"),
             @Mapping(source = "nombre", target = "name"),
+            @Mapping(source= "idCategoria", target = "categoryId"),
             @Mapping(source = "precioVenta", target = "price"),
             @Mapping(source = "cantidadStock", target = "stock"),
             @Mapping(source = "estado", target = "active"),

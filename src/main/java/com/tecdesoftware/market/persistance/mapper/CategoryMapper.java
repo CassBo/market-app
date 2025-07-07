@@ -1,7 +1,7 @@
 package com.tecdesoftware.market.persistance.mapper;
 
 import com.tecdesoftware.market.domain.Category;
-import com.tecdesoftware.market.persistence.entity.Categoria;
+import com.tecdesoftware.market.persistance.entity.Categoria;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
