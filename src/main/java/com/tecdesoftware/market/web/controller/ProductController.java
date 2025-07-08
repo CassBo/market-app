@@ -45,10 +45,21 @@ public class ProductController {
 
     @PostMapping
     public ResponseEntity<Product> save(@RequestBody Product product) {
+        System.out.println("=== DEBUG POST ===");
+        System.out.println("Producto recibido:");
+        System.out.println("- Name: " + product.getName());
+        System.out.println("- CategoryId: " + product.getCategoryId());
+        System.out.println("- Price: " + product.getPrice());
+        System.out.println("- Stock: " + product.getStock());
+        System.out.println("- Active: " + product.isActive());
+
         try {
             Product savedProduct = productService.save(product);
+            System.out.println("Producto guardado exitosamente con ID: " + savedProduct.getProductId());
             return new ResponseEntity<>(savedProduct, HttpStatus.CREATED);
         } catch (Exception e) {
+            System.out.println("Error al guardar producto: " + e.getMessage());
+            e.printStackTrace();
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
