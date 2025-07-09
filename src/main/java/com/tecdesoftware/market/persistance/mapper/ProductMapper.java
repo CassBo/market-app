@@ -8,7 +8,6 @@ import org.mapstruct.Mappings;
 
 import java.util.List;
 
-// Se usa "uses" porque se tiene el atributo category que a su vez tiene su propio Mapper
 @Mapper(componentModel = "spring", uses = CategoryMapper.class)
 public interface ProductMapper {
 
@@ -26,7 +25,6 @@ public interface ProductMapper {
     List<Product> toProducts(List<Producto> productos);
 
     @Mappings({
-            // Aquí ignoramos el ID para evitar errores al insertar nuevos productos
             @Mapping(target = "idProducto", ignore = true),
             @Mapping(source = "name", target = "nombre"),
             @Mapping(source = "categoryId", target = "idCategoria"),
