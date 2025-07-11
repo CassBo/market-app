@@ -29,7 +29,7 @@ public class Compra {
     private Cliente cliente;
 
     // CORREGIDO: mappedBy debe hacer referencia a la propiedad "compra" en CompraProducto
-    @OneToMany(mappedBy = "compra")
+    @OneToMany(mappedBy = "compra", cascade = {CascadeType.ALL})
     private List<CompraProducto> productos;
 
     // Constructor sin argumentos

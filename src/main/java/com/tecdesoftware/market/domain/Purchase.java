@@ -9,8 +9,8 @@ public class Purchase {
     private LocalDateTime date;
     private String paymentMethod;
     private String comment;
-    private String estate;
-    private List<PurchaseItem> item;
+    private String state;
+    private List<PurchaseItem> items;
 
     public int getPurchaseId() {
         return purchaseId;
@@ -53,18 +53,18 @@ public class Purchase {
     }
 
     public String getEstate() {
-        return estate;
+        return state;
     }
 
     public void setEstate(String estate) {
-        this.estate = estate;
+        this.state = estate;
     }
 
     public List<PurchaseItem> getItem() {
-        return item;
+        return items;
     }
 
     public void setItem(List<PurchaseItem> item) {
-        this.item = item;
+        this.items = item;
     }
 }
