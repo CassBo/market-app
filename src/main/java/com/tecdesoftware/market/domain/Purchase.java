@@ -52,19 +52,23 @@ public class Purchase {
         this.comment = comment;
     }
 
-    public String getEstate() {
+    // CORRECCIÓN: Getter corregido - era getEstate() debería ser getState()
+    public String getState() {
         return state;
     }
 
-    public void setEstate(String estate) {
-        this.state = estate;
+    // CORRECCIÓN: Setter corregido - era setEstate() debería ser setState()
+    public void setState(String state) {
+        this.state = state;
     }
 
-    public List<PurchaseItem> getItem() {
+    // CORRECCIÓN: Getter corregido - era getItem() debería ser getItems() para ser consistente
+    public List<PurchaseItem> getItems() {
         return items;
     }
 
-    public void setItem(List<PurchaseItem> item) {
-        this.items = item;
+    // CORRECCIÓN: Setter corregido - era setItem() debería ser setItems() para ser consistente
+    public void setItems(List<PurchaseItem> items) {
+        this.items = items;
     }
 }
